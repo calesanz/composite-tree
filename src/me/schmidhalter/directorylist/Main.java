@@ -5,7 +5,14 @@ import me.schmidhalter.directorylist.model.*;
 public class Main {
 
 	public static void main(String[] args) {
-		IDirectoryItem root = getFromPath("/", 3);
+		if(args.length != 2)
+			throw new IllegalArgumentException("Programm benötigt folgende Parameter: Pfad Rekursionstiefe");
+		
+		
+		String pfad = args[0];
+		int recursion = Integer.parseInt(args[1]);
+		 
+		IDirectoryItem root = getFromPath(pfad, recursion);
 		System.out.println("Loaded");
 		System.out.println(root.explain());
 
