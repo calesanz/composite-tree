@@ -7,7 +7,7 @@ public class Main {
 	public static void main(String[] args) {
 	TreeWindow window = 	new TreeWindow();
 	TreePanel treepanel = new TreePanel();
-	window.setLayout(new FlowLayout());
+	window.setLayout(null);
 	window.add(treepanel);
 	window.repaint();
 		
